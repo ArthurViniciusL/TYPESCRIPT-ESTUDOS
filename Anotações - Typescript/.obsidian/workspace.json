@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "da6b21fe87685ac1",
+        "id": "0754b9512e436c34",
         "type": "tabs",
         "children": [
           {
-            "id": "7573a44ba3feb080",
+            "id": "09a140a98ef76e99",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,12 +146,26 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "7573a44ba3feb080",
+  "active": "bbb699f194516912",
   "lastOpenFiles": [
+    "imgs-notes/0009.png",
+    "imgs-notes/0010.png",
+    "imgs-notes/0008.png",
+    "imgs-notes/0007.png",
+    "imgs-notes/0006.png",
+    "Pasted image 20231222203358.png.md",
+    "Typescript - Resumo.md",
+    "imgs-notes/0005.png",
+    "imgs-notes/0004.png",
+    "imgs-notes/0003.png",
+    "imgs-notes/0002.png",
+    "imgs-notes/0001.png",
+    "imgs-notes",
+    "imgs - notes/0001.png",
+    "imgs - notes",
+    "codes",
     "pic/pic1_50.png.md",
     "pic",
-    "imagens/0001.png",
-    "Typescript - Resumo.md",
     "imagens"
   ]
 }
