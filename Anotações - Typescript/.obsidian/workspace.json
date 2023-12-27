@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0754b9512e436c34",
+        "id": "acfc6ce4f58bdd2b",
         "type": "tabs",
         "children": [
           {
-            "id": "09a140a98ef76e99",
+            "id": "5a59250f9c66c416",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -129,7 +129,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -146,22 +147,21 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "bbb699f194516912",
+  "active": "5a59250f9c66c416",
   "lastOpenFiles": [
-    "imgs-notes/0009.png",
-    "imgs-notes/0010.png",
-    "imgs-notes/0008.png",
-    "imgs-notes/0007.png",
-    "imgs-notes/0006.png",
-    "Pasted image 20231222203358.png.md",
+    "imgs-notes/0016.png",
+    "imgs-notes/0015.png",
     "Typescript - Resumo.md",
-    "imgs-notes/0005.png",
-    "imgs-notes/0004.png",
-    "imgs-notes/0003.png",
-    "imgs-notes/0002.png",
-    "imgs-notes/0001.png",
+    "imgs-notes/0017.png",
+    "imgs-notes/0014.png",
+    "imgs-notes/0014.png",
+    "imgs-notes/0013.png",
+    "imgs-notes/0012.png",
+    "imgs-notes/0011.png",
+    "imgs-notes/0007.png",
+    "imgs-notes/0009.png",
+    "Pasted image 20231222203358.png.md",
     "imgs-notes",
-    "imgs - notes/0001.png",
     "imgs - notes",
     "codes",
     "pic/pic1_50.png.md",
