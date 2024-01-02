@@ -111,4 +111,67 @@ ________________________________________________________________________
 	```
 
 	![[0012.png]]
+## Aula 429 - Tipos no Typescript.
+
+Apesar do **Typescript** também realizar a inferência de tipos, uma das características do **Typescript** é permitir que você tenha mais controle sobre os tipos. 
+
+O **Typescript** possui suporte para todos os tipos mais básicos e declaração de "estruturas" segue o mesmo modelo do Javascript, com _let_ e _var_ para variáveis e _const_ para constantes.
+### Variáveis e constantes
+```
+let variavel: tipo = valor;
+var ...
+const ...
+```
+
+### Tipos no Typescript
+1. **string** : Para trabalhar com texto.
+2. **number** : Abrange a implementação de valores inteiros e reais.
+3. **boolean** : true ou false.
+4. **symbol** : É um pouco similar a String, mas ele usado para criar atributos de identificação (um id).
+5. **bigint** : Dá suporte a valores inteiros que ultrapassam a capacidade _bytes_ suportados por um **number**.
+6. **void**: O void serve para explicitar que a função não tem um retorno. Outra forma de d definir a função como _void_ é apenas **não declarando** o tipo da função.
+7. **any**: Serve para declarar explicitamente que é esperado qualquer coisa.
+
+![[0018.png]]
+### Arrays
+
+Existem duas formas de declarar um Array dentro do **Typescript**.
+1. A mais comum
+	**Sintaxe:**
+	```
+	let nomeDoArray: tipo[] = [ valores ];
+	```
 	
+2. Utilizando a noção de _generics_.
+	**Sintaxe:**
+	```
+	let nomeDoArray: Array<tipo> = [ valores ];
+	```
+	![[0019.png]]
+### Objetos
+A declaração de objetos dentro do **Typescript** segue do mesmo jeito que no **Javascript**, mas com a possibilidade de definir tipos e declarar campos opcionais.
+
+**Sintaxe**
+```
+let nomeDoObjeto: {atributo: tipo} = { valoresDosObjetos }
+```
+
+Atributos considerados "opcionais" são declarados com um uma _?_.
+![[0020.png]]
+
+### Funções
+
+A declaração de funções também segue o mesmo modelo do **Javascript**, podendo ser de algum tipo específico (_number_, _string_, _boolean_ e etc), ou do tipo _void_, elas também pode ser escritas de duas maneira no **Typescript**.
+
+1. Modelo tradicional.
+	```
+	function nomeDaFunc(atributo: tipo): tipoDaFunc {...}
+	```
+1. Modelo _inline_, que é similar a uma _arrow function_ e é interpresante de ser usado em funções mais simples.
+	```
+	const nomeDaFunc(atributo: tipo) => tipoDaFunc(atributo) => retorno;
+	```
+
+![[0021.png]]
+
+AAA
