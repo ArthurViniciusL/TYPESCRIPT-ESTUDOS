@@ -1,4 +1,6 @@
 {
   "accentColor": "#9551fb",
-  "cssTheme": "Dracula Official"
+  "cssTheme": "Dracula Official",
+  "showViewHeader": true,
+  "nativeMenus": true
 }

@@ -2,7 +2,14 @@
 
 - Repositório do curso: https://github.com/luizomf/cursojstypescript
 - Repositório de estudos: https://github.com/ArthurViniciusL/TYPESCRIPT-ESTUDOS
-## Aula 420 - O que é Typescript.
+- Documentação da linguagem: https://www.typescriptlang.org/docs/
+## Sobre
+Autor: Arthur Vinicius / Github: https://github.com/ArthurViniciusL
+
+OBS: Esse resumo não foca explicar todos os detalhes de como programar, sendo interessante que você já domine a arte de programar.
+
+Esse resumo também não busca em abraçar todos os detalhes do que é, como funciona e como usar o Typescript. Esse resumo foi feito como um guia de anotações para facilitar o meu entendimento de como trabalhar com Typescript, para o uso dele com React js ou Next js. 
+### O que é Typescript.
 
 O Typescript é um superset para o Javascript, com tipagem estática, novos recursos e que compila para Javascript puro.
 
@@ -111,26 +118,28 @@ ________________________________________________________________________
 	```
 
 	![[0012.png]]
-## Aula 429 - Tipos no Typescript.
+### Declarando no Typescript.
 
 Apesar do **Typescript** também realizar a inferência de tipos, uma das características do **Typescript** é permitir que você tenha mais controle sobre os tipos. 
 
 O **Typescript** possui suporte para todos os tipos mais básicos e declaração de "estruturas" segue o mesmo modelo do Javascript, com _let_ e _var_ para variáveis e _const_ para constantes.
-### Variáveis e constantes
+
+- #### Variáveis e constantes
 ```
 let variavel: tipo = valor;
 var ...
 const ...
 ```
 
-### Tipos no Typescript
+- #### Tipos no Typescript
 1. **string** : Para trabalhar com texto.
 2. **number** : Abrange a implementação de valores inteiros e reais.
 3. **boolean** : true ou false.
 4. **symbol** : É um pouco similar a String, mas ele usado para criar atributos de identificação (um id).
 5. **bigint** : Dá suporte a valores inteiros que ultrapassam a capacidade _bytes_ suportados por um **number**.
 6. **void**: O void serve para explicitar que a função não tem um retorno. Outra forma de d definir a função como _void_ é apenas **não declarando** o tipo da função.
-7. **any**: Serve para declarar explicitamente que é esperado qualquer coisa.
+7. **any**: Serve para declarar explicitamente que pode ser recebido qualquer coisa.
+8. **unknown**: Também serve para explicitar que qualquer coisa pode ser recebida, mas possui uma camada de segurança a mais que te obriga a fazer uma _checagem antes de fazer uma atribuição_. 
 
 ![[0018.png]]
 ### Arrays
@@ -172,6 +181,93 @@ A declaração de funções também segue o mesmo modelo do **Javascript**, pode
 	const nomeDaFunc(atributo: tipo) => tipoDaFunc(atributo) => retorno;
 	```
 
-![[0021.png]]
+![[imgs-notes/0021.png]]
 
-AAA
+### Enum
+Um tipo **Enum** funciona como um _objeto_, onde eu tenho uma chave associada a um atributo. Ele serve para situações onde eu quero ter uma categoria de opções e em vez de usar um texto simples ou um valor numérico, eu desejo criar restrições afim de evitar erros.
+
+O **Enum** por padrão não exite não existe no **Javascript**, já é uma implementação criada pelo **Typescript** e a sintaxe é similar a do **Java**.
+
+**Sintaxe:**
+```
+enum NomeDaClasseEnum {
+	ATRIBUTOS,
+	...
+}
+```
+
+	![[0021 1.png]]
+	![[0022.png]]
+
+### Type alias
+É tipo usado para criar tipos personalizados, um pouco similar a criação de _interfaces_.
+
+**Sintaxe:**
+```
+type nomeDoTipo = atributos;
+```
+
+![[imgs-notes/0024.png]]
+
+### Type assertions
+Esse é um recurso do **Typescript** muito útil para se trabalhar, por exemplo, trabalhar com a estrutura DOM do HTML no navegador.
+
+Criar uma _assertion_ é explicitar para o **Typescript** que uma determina propriedade existe e não é nula.
+
+**Sintaxe:**
+```
+... as HTMLpropriedaElement;
+```
+
+![[0025.png]]
+
+### Classes
+A estrutura de implementação das classes dentro **Typescript** segue uma estrutura similar a do **Java**.
+
+Com o detalhe de que, sempre que for definir a classe deve ser usado o _export_, para criar uma classe publica, e sempre que for chamar uma classe deve ser usado o _import_. Porque assim como **Javascript**, o **Typescript** entende uma classe como um módulo.
+
+**Sintaxe:***
+```
+export class NomeDaClasse {
+	visibilidade atributo: tipo;
+	
+	constructor(atributos: tipos) {
+		this.atributos;
+	}
+}
+```
+
+- #### Visibilidade dos métodos e atributos:
+	1. **public**: Torna os métodos/atributos visíveis para todas as classes.
+	2. **private**: Torna os métodos/atributos visíveis apenas dentro da classe.
+	3. **protected**: Permite que métodos/atributos sejam visíveis apenas para classes que estendem a classe "mãe".
+- #### Implementando uma classe:
+	![[0026.png]]
+	O uso do **readonly** serve para informar que esse atributo não pode ser modificado a qualquer momento e só deve está aceitável através do construtor da classe.
+	![[0027.png]]
+	 Instanciando a minha classe.
+	![[0028.png]]
+	![[0029.png]]
+	
+	A criação dos objetos poderia ser feita dentro do próprio arquivo com as classes. Mas eu optei por separá-los para trazer uma maior proximidade com a sintaxe do **Java**.
+	
+	 O nome da classe é definida como _Main()_ e dentro dela temos o método _start():void_ que constrói os objetos. E para que a classe seja inicializada é usado _Main.start();_
+
+### Interfaces
+A implementação de uma _interface_ **Typescript** também segue a mesma "linha de pensamento" de uma _interface_ dentro do Java.
+
+**Sintaxe:**
+```
+interface NomeDaInterface {
+	atributos;
+}
+```
+
+![[0030.png]]
+
+Essa é a forma mais simples de criar uma interface, mas no **Typescript** é possível fazer um _extends_ de várias interfaces em uma interface.  Isso pode ser interessante para fazer uma _union type_, semelhante ao que é feito quando se usa _type alias_.
+
+- #### Implementando interfaces
+	![[0031.png]]
+	![[0032.png]]
+	![[0033.png]]
